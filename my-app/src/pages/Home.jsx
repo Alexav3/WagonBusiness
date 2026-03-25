@@ -5,7 +5,7 @@ function Home() {
         <h1>Pussy Wagon</h1>
         <p>
           Welcome to the best wagon service in New Orleans. Hello Kelly this is
-          the start of your website with love Alex{" "}
+          the start of your website with love Alex.{" "}
         </p>
 
         <div className="hero-buttons">
