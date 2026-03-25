@@ -1,8 +1,18 @@
 function Home() {
   return (
-    <div>
-      <h1>Welcome to WagonBusiness</h1>
-      <p>This is the homepage.</p>
+    <div className="home">
+      <section className="hero">
+        <h1>Pussy Wagon</h1>
+        <p>
+          Welcome to the best wagon service in New Orleans. Hello Kelly this is
+          the start of your website with love Alex{" "}
+        </p>
+
+        <div className="hero-buttons">
+          <button className="btn-primary">Book a Ride</button>
+          <button className="btn-secondary">Learn More</button>
+        </div>
+      </section>
     </div>
   );
 }
