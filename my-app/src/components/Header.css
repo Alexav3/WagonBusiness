@@ -1,0 +1,53 @@
+.header {
+  width: 100%;
+  background-color: #f6f1f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  color: #ff4fa3;
+  font-size: 2rem;
+  font-family: "Brush Script MT", cursive;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: #ff4fa3;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 1rem;
+  }
+}
