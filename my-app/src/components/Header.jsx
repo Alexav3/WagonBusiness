@@ -1,7 +1,10 @@
+import { useState } from "react";
 import "./Header.css";
 import logoImg from "../assets/noBackground.png";
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="header">
       <h2 className="logo">
@@ -9,10 +12,22 @@ function Header() {
         Pussy Wagon
       </h2>
 
-      <nav className="nav">
-        <a href="#">Home</a>
-        <a href="#">Book</a>
-        <a href="#">Contact</a>
+      {/* Burger button (mobile only) */}
+      <button className="burger" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
+      </button>
+
+      {/* Nav */}
+      <nav className={`nav ${menuOpen ? "open" : ""}`}>
+        <a href="#" onClick={() => setMenuOpen(false)}>
+          Home
+        </a>
+        <a href="#" onClick={() => setMenuOpen(false)}>
+          Book
+        </a>
+        <a href="#" onClick={() => setMenuOpen(false)}>
+          Contact
+        </a>
       </nav>
     </header>
   );

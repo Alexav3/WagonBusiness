@@ -5,14 +5,25 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+  position: relative;
 }
 
+/* Logo stays EXACTLY your style */
 .logo {
   color: #ff4fa3;
   font-size: 2rem;
   font-family: "Brush Script MT", cursive;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.logo-img {
+  width: 40px;
+  height: auto;
+}
+
+/* Desktop nav (unchanged look) */
 .nav {
   display: flex;
   gap: 30px;
@@ -29,35 +40,42 @@
   color: #ff4fa3;
 }
 
-/* Mobile */
+/* Burger hidden on desktop */
+.burger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 🔽 Mobile */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    text-align: center;
+  .burger {
+    display: block;
+    color: #ff4fa3;
   }
 
-  .logo {
-    font-size: 1.8rem;
-  }
-
+  /* Hide nav by default */
   .nav {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background: #fff;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* Show when open */
+  .nav.open {
+    display: flex;
   }
 
   .nav a {
-    font-size: 1rem;
+    padding: 10px 15px;
   }
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-img {
-  width: 40px;
-  height: auto;
 }
