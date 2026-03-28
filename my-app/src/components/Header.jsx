@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"; // 👈 ADD THIS
 import "./Header.css";
 import logoImg from "../assets/noBackground.png";
 
@@ -19,15 +20,21 @@ function Header() {
 
       {/* Nav */}
       <nav className={`nav ${menuOpen ? "open" : ""}`}>
-        <a href="#" onClick={() => setMenuOpen(false)}>
+        <Link to="/" onClick={() => setMenuOpen(false)}>
           Home
-        </a>
-        <a href="#" onClick={() => setMenuOpen(false)}>
+        </Link>
+
+        <Link to="/book" onClick={() => setMenuOpen(false)}>
           Book
-        </a>
-        <a href="#" onClick={() => setMenuOpen(false)}>
+        </Link>
+
+        <Link to="/popular-stops" onClick={() => setMenuOpen(false)}>
+          Popular Stops
+        </Link>
+
+        <Link to="/contact" onClick={() => setMenuOpen(false)}>
           Contact
-        </a>
+        </Link>
       </nav>
     </header>
   );
