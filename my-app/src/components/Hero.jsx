@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Hero.css";
 
 function Hero() {
@@ -11,8 +12,9 @@ function Hero() {
         <p>Kelly I made updates to your website always loving you Alex.</p>
 
         <div className="hero-buttons">
-          <button className="btn-primary">Book a Ride</button>
-          <button className="btn-secondary">Learn More</button>
+          <Link to="/book" className="btn-primary">
+            Book a Ride
+          </Link>
         </div>
       </div>
     </section>
