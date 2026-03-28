@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  background-color: #f9dfdf;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +8,6 @@
   position: relative;
 }
 
-/* Logo stays EXACTLY your style */
 .logo {
   color: #ff4fa3;
   font-size: 2rem;
@@ -23,7 +22,6 @@
   height: auto;
 }
 
-/* Desktop nav (unchanged look) */
 .nav {
   display: flex;
   gap: 30px;
@@ -40,7 +38,6 @@
   color: #ff4fa3;
 }
 
-/* Burger hidden on desktop */
 .burger {
   display: none;
   font-size: 2rem;
@@ -49,14 +46,11 @@
   cursor: pointer;
 }
 
-/* 🔽 Mobile */
 @media (max-width: 768px) {
   .burger {
     display: block;
     color: #ff4fa3;
   }
-
-  /* Hide nav by default */
   .nav {
     position: absolute;
     top: 100%;
@@ -67,7 +61,7 @@
     padding: 15px;
     border-radius: 10px;
     display: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   /* Show when open */
